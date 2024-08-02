@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYKAA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-left: -3px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            z-index: 2;
+        }
+
+        .nav1 {
+            background-color: #fed0db;
+            text-align: end;
+            padding: 1% 3%;
+            height: 40px;
+
+
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            margin: 4px;
+            padding: 1px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+
+
+        }
+
+        .nav1 a img {
+            margin-right: 2px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .nav2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            margin: -18px 0 0 0;
+            height: 90px;
+
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav2 a {
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            margin: 7px;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 7px;
+            display: inline-flex;
+            align-items: center;
+
+        }
+
+        .nav2 .beauty{
+            padding-right: 16.5%;
+        }
+        .nav2 a:first-child {
+            margin-right: 20px;
+        }
+
+        .nav2 a img {
+            width: 70px;
+            height: auto;
+        }
+
+        .nav2 a:hover {
+            color: #e80071;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 5px 10px;
+            flex-grow: 1;
+            /* max-width: 200px; */
+            margin-left: 215px;
+            /* width: 3%; */
+            
+
+
+        }
+
+        .search-icon {
+            color: #999;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .search-container input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 7px;
+            width: 100%;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #757575;
+            font-family: inherit;
+            
+        }
+
+        .search-container input[type="text"]::placeholder {
+            color: #999;
+        }
+
+        .nav2 {
+            justify-content: center;
+        }
+
+        .search-container {
+            margin-left: 0;
+            margin-top: 10px;
+            max-width: 80%;
+        }
+
+        .sign-in {
+            background-color: #e80071;
+            /* Nykaa pink */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 10px;
+            font-size: 14px;
+            margin-right: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .cart {
+
+            margin-left: 20px;
+            margin-top: 5px;
+            width: 25px;
+            height: auto;
+
+        }
+
+        .category-navbar {
+            background-color: white;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .category-menu a:hover {
+            color: #e80071;
+        }
+
+        .category-navbar a {
+            font-size: 14px;
+            padding: 0px 5px;
+        }
+
+        .category-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #555;
+            font-weight: normal;
+        }
+
+        .category-menu a.sale {
+            font-weight: bold;
+        }
+
+        .category-navbar a img {
+            width: 90px;
+            vertical-align: middle;
+            margin-left: -27px;
+        }
+
+        .wallpaper img {
+            width: 30%;
+            position: relative;
+            border-radius: 3%;
+            margin-left: 50px;
+        }
+
+        .wallpaper2 img {
+            width: 30%;
+            position: relative;
+            border-radius: 3%;
+            margin-left: 35%;
+            margin-top: -800px;
+            top: 0;
+            margin-bottom: 20px;
+            margin-right: 30px;
+
+        }
+
+        .wallpaper3 img {
+            width: 30%;
+            position: absolute;
+            border-radius: 3%;
+            right: 50px;
+            top: 185px;
+            /* Adjust this value to align with .wallpaper2 */
+        }
+
+        .h1 {
+            font-weight: bold;
+            font-size: x-large;
+            margin-left: 4%;
+            margin-top: -30px;
+        }
+
+        .banner1 img {
+            width: 93%;
+            height: 100%;
+            border-radius: 8px;
+            margin-left: 4%;
+        }
+
+        .pic1 img {
+            width: 16%;
+            border-radius: 3%;
+            margin-left: 3%;
+            margin-top: 14px;
+
+        }
+
+        .pic2 img {
+            max-width: 100%;
+
+        }
+
+        .pic2img {
+            color: black;
+            font-family: sans-serif;
+            font-weight: bolder;
+            padding: 20px 5px;
+            margin-top: -9px;
+            background-color: #f3f4f6;
+        }
+
+        .pic2img img {
+            width: 400px;
+        }
+
+        .p2 p {
+            color: rgb(87, 86, 86);
+            font-family: sans-serif;
+            margin-top: -30px;
+
+        }
+
+        .p2 {
+            display: flex;
+            justify-content: space-between;
+            padding: 0% 0% 0% 1%;
+
+        }
+
+        .p2 h3 {
+            color: black;
+            margin-top: -60px;
+            font-size: 1.9rem;
+        }
+
+        .pic3 {
+            margin-top: 5px;
+            margin-left: 3px;
+        }
+
+
+        .offers-container2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 155px;
+            padding: 10px 10%;
+            margin-left: 5px;
+
+        }
+
+        .offer1 {
+            width: 100%;
+            margin-right: 5px;
+            position: absolute;
+        }
+
+
+        .offers-container3 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 350px;
+            padding: 80px 40px;
+            margin-left: 5px;
+
+
+        }
+
+        .box1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: -40px;
+            padding: 10px 15px;
+            margin-left: 16px;
+            width: 16%;
+            top: 0;
+
+        }
+
+        .box1 img {
+            padding: 1%;
+        }
+
+        .offer8 {
+            width: 170px;
+            height: 30%;
+
+
+        }
+
+        .banner2 p {
+            color: black;
+            font-family: sans-serif;
+            font-weight: bolder;
+            padding: 20px 5px;
+            margin-top: 3px;
+            font-size: larger;
+            margin-left: 3%;
+
+        }
+
+        .banner2 img {
+            width: 95%;
+            margin-left: 35px;
+            height: 60%;
+            border-radius: 10px;
+        }
+
+        .banner3 img {
+            width: 100%;
+            margin-top: 1%;
+        }
+
+        .offer2 {
+            width: 95%;
+            margin-right: 5px;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .tag1 {
+            display: flex;
+            align-items: center;
+            margin-top: 29px;
+            padding: 1px;
+            margin-left: 5px;
+
+        }
+
+        .t1 {
+            width: 95%;
+            margin-right: 5px;
+            position: absolute;
+        }
+
+        .offers-container4 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            padding: 10px 15px;
+            margin-left: 50px;
+        }
+
+        .offer3 {
+            width: 200px;
+            height: 30%;
+        }
+
+        .tag2 {
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+            padding: 1px;
+            margin-left: 1px;
+
+        }
+
+        .t2 {
+            width: 100%;
+            margin-right: 5px;
+            position: absolute;
+
+        }
+
+        .offers-container5 {
+            display: flex;
+            align-items: center;
+            margin-top: 268px;
+            padding: 1px;
+            margin-left: 1px;
+        }
+
+        .offer4 {
+            width: 100%;
+            margin-right: 5px;
+            position: absolute;
+        }
+
+        .offers-container6 {
+            display: flex;
+            align-items: center;
+            margin-top: 358px;
+            padding: 1px;
+            margin-left: 1px;
+
+        }
+
+        .offers-container7 {
+            display: flex;
+            align-items: center;
+            margin-top: 356px;
+            padding: 1px;
+            margin-left: 1px;
+        }
+
+        .offers-container8 {
+            display: flex;
+            align-items: center;
+            margin-top: 363px;
+            padding: 1px;
+            margin-left: 1px;
+
+        }
+
+        .offers-container9 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 240px;
+            padding: 80px;
+            margin-left: 5px;
+        }
+
+        .offer5 {
+            width: 95%;
+            margin-right: 5px;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .tag3 {
+            display: flex;
+            align-items: center;
+            margin-top: 90px;
+            padding: 1px;
+            margin-left: 1px;
+        }
+
+        .t3 {
+            width: 100%;
+            margin-right: 5px;
+            position: absolute;
+        }
+
+        .offers-container10 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 90px;
+            padding: 10px 15px;
+            margin-left: 20px;
+        }
+
+        .offer6 {
+            width: 385px;
+            height: 30%;
+            border-radius: 20px;
+        }
+
+        .tag4 {
+            display: flex;
+            align-items: center;
+            margin-top: 90px;
+            padding: 1px;
+            margin-left: 1px;
+        }
+
+        .t4 {
+            width: 100%;
+            margin-right: 5px;
+            position: absolute;
+        }
+
+        .offers-container11 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 54px;
+            padding: 10px 15px;
+            margin-left: 1px;
+            background-color: #dcc1f4;
+        }
+
+        .offer7 {
+            width: 385px;
+            height: 30%;
+            border-radius: 20px;
+        }
+
+        .banner4 {
+            margin-top: 200px;
+
+        }
+
+        .banner4 img {
+            width: 100%;
+
+        }
+
+        .banner5 img {
+            width: 100%;
+
+        }
+
+        .tag5 img {
+            width: 100%;
+        }
+
+        .banner6 img {
+            width: 85%;
+            margin-left: 10%;
+            border-radius: 10px;
+        }
+
+        .banner7 img {
+            width: 85%;
+            margin-left: 10%;
+            margin-top: -1%;
+        }
+
+        .banner7 {
+            margin-top: 1%;
+        }
+
+        .banner8_img {
+            width: 85%;
+            margin-left: 125px;
+            margin-bottom: -13px;
+
+        }
+
+        .banner8 img {
+            width: 50%;
+
+
+        }
+
+        .banner8 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: -2px;
+            padding: 10px 15px;
+            margin-left: 110px;
+            width: 24.3%;
+        }
+
+        .tag5 {
+            display: flex;
+            align-items: center;
+        }
+
+        .tag5 img {
+            width: 85%;
+            margin-left: 125px;
+            height: 60%;
+            border-radius: 10px;
+        }
+
+        .b9 {
+
+            width: 100%;
+        }
+
+        .banner9 {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: -2px;
+            padding: 10px 15px;
+            margin-left: 30px;
+
+        }
+
+        .banner9 img {
+            width: 15%;
+            border-radius: 25px;
+        }
+
+        .banner10 img {
+            width: 100%;
+        }
+
+        .offers-container12 {
+            margin-left: 70px;
+            justify-content: space-around;
+
+        }
+
+        .img5 img {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 3%;
+        }
+
+        .text1 {
+            font-size: x-small;
+            margin-left: 60px;
+
+        }
+
+        .text1 h1 {
+            margin-top: 20px;
+        }
+
+        .color nav {
+            background-color: #f3f3f3;
+        }
+
+        .bar1 {
+            background-color: #3a4047;
+            padding: 1% 1%;
+
+        }
+
+        .bar1 a {
+            color: white;
+            font-family: sans-serif;
+            display: inline-flex;
+            align-items: center;
+            margin: 20px;
+
+
+        }
+
+        .bar1 a img {
+            width: 30px;
+            margin-left: 60px;
+        }
+
+        .bar1 input {
+            background-color: #3a4047;
+            width: 15%;
+            border: none;
+            border-bottom-style: solid;
+            outline: none;
+            margin-left: 6.5%;
+            border-color: white;
+
+
+
+        }
+
+        .bar1 input::placeholder {
+            color: white;
+
+        }
+
+        .sub {
+            background-color: #3a4047;
+            width: 5%;
+            height: 30px;
+            border-color: white;
+            gap: 10px;
+            margin-top: -5px;
+            color: white;
+            padding: 3px;
+            cursor: pointer;
+            border-color: white;
+            color: white;
+
+        }
+
+        .play {
+            width: 20%;
+            margin-left: 11%;
+        }
+
+        /* .sec {
+            font-size: 0.9rem;
+            margin-right: 100px;
+        } */
+
+        .time {
+            color: white;
+            margin-left: 60%;
+            margin-top: -50px;
+
+        }
+
+        .bar1 p {
+            font-size: 0.9rem;
+            margin-left: 69%;
+        }
+
+        .footer {
+            background-color: #8c8d94;
+            color: white;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-column {
+            width: 20%;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            margin-left: 27%;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+            margin-left: 28%;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: lighter;
+            font-family: cursive;
+            margin-left: 28%;
+        }
+
+        .feature-section {
+            background-color: white;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .feature-item {
+            text-align: center;
+            width: 20%;
+        }
+
+        .feature-item img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .feature-item h4 {
+            margin: 10px 0 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .feature-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .social-media img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #666;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #ff0099;
+    color: white;
+    
+}
+
+
+.footer-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 2%;
+}
+.footer-top p{
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    background-color: #ff0099;
+    margin-top: -40px;
+    
+}
+.footer-bottom p{
+    font-size: small;
+}
+
+.popular-links {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    
+}
+
+.popular-links h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.popular-links p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav1">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/244/244210.png" alt="Get App">Get App</a>
+            <a href="#">|</a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" alt="Store & Events">Store &
+                Events</a>
+            <a href="#">|</a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1332/1332607.png" alt="Gift Card">Gift Card</a>
+            <a href="#">|</a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/906/906794.png" alt="Help">Help</a>
+        </nav>
+        <nav class="nav2">
+            <a href="#"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqyq3r8dunkw8CO9bo-2q4VxrE58QGiIZ1g&s"
+                    alt="Nykaa"></a>
+            <a href="#">Categories</a>
+            <a href="#">Brands</a>
+            <a href="#">Luxe</a>
+            <a href="#">Nykaa Fashion</a>
+            <a class='beauty' href="#">Beauty Advice</a>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search on Nykaa" />
+            </div>
+
+            <div>
+                <button class="sign-in">Sign in</button>
+            </div>
+
+            <div>
+                <img class="cart" src="https://img.icons8.com/?size=64&id=22167&format=png" alt="cart">
+            </div>
+        </nav>
+    </header>
+    <div class="category-navbar">
+        <nav class="category-menu">
+            <a href="#">Makeup</a>
+            <a href="#">Skin</a>
+            <a href="#">Hair</a>
+            <a href="#">Appliances</a>
+            <a href="#">Bath & Body</a>
+            <a href="#">Natural</a>
+            <a href="#">Mom & Baby</a>
+            <a href="#">Health & Wellness</a>
+            <a href="#">Men</a>
+            <a href="#">Fragrance</a>
+            <a href="#">Lingerie & Accessories</a>
+            <a href="#" class="sale">
+                <img src="C:\Users\jssar\OneDrive\Desktop\Frontend\css\Screenshot 2024-07-28 151003.png" />
+            </a>
+    </div>
+    </nav>
+    <div class="wallpaper">
+        <img
+            src="https://images-static.nykaa.com/uploads/ae0d385c-0797-4f2d-9912-58c56d137b35.jpg?tr=cm-pad_resize,w-900" />
+    </div>
+    <div class="wallpaper2">
+        <img
+            src="https://images-static.nykaa.com/creatives/bddbe88b-5135-46c7-96f4-3c416c8e4168/default.jpg?tr=cm-pad_resize,w-900">
+    </div>
+    <div class="wallpaper3">
+        <img
+            src="https://images-static.nykaa.com/creatives/48fc5368-4922-47cd-acab-ce5863f8add6/default.jpg?tr=cm-pad_resize,w-900 ">
+    </div>
+
+    <div class="h1">
+        <p>Brand In Focus</p>
+    </div>
+
+    <div class="banner1">
+        <img
+            src="https://images-static.nykaa.com/uploads/3925410d-8e70-4018-8642-49e5ef92f885.png?tr=cm-pad_resize,w-1800">
+    </div>
+
+    <div class="pic1">
+        <img
+            src="https://images-static.nykaa.com/uploads/efbddb67-700e-44f2-9161-11cc4ccb10d9.png?tr=cm-pad_resize,w-450" />
+        <img src="https://images-static.nykaa.com/uploads/80d635fe-6a05-4b51-be15-146c68e7b30a.png?tr=cm-pad_resize,w-450"
+            alt="tag" />
+        <img src="https://images-static.nykaa.com/uploads/a6a3bf71-46d8-401a-8312-ccfe4fd88c87.png?tr=cm-pad_resize,w-450"
+            alt="tag" />
+        <img src="https://images-static.nykaa.com/uploads/f0e11d7d-d107-4135-a0ed-1870ecca58bf.png?tr=cm-pad_resize,w-450"
+            alt="tag" />
+        <img src="https://images-static.nykaa.com/uploads/b61af84d-4fe5-488a-8a0b-a3765d9edaf3.png?tr=cm-pad_resize,w-450"
+            alt="tag" />
+    </div>
+    <div class="pic2">
+        <img src="https://images-static.nykaa.com/uploads/9d100298-daa3-48bc-8df3-70cc0ffb9e72.jpg?tr=cm-pad_resize,w-1800"
+            alt="Season's Hottest Offers" />
+    </div>
+    <div class="pic2img">
+        <div class="p2">
+            <a href=""><img
+                    src="https://images-static.nykaa.com/creatives/5cd692f6-4464-4926-93f7-d49fec3a9858/default.jpg?tr=cm-pad_resize,w-900"
+                    alt="tag" />
+                <h3>Up to 35% Offer</h3>
+                <p>Great Deals On Combos</p>
+            </a>
+            <a href=""><img
+                    src="https://images-static.nykaa.com/creatives/b806a8b4-305f-4269-bacc-d59aea8930a2/default.jpg?tr=cm-pad_resize,w-900"
+                    alt="tag" />
+                <h3>Flat 25% Off</h3>
+                <p>On Bestsellers!</p>
+            </a>
+
+            <a href=""><img
+                    src="https://images-static.nykaa.com/creatives/6c90b913-ef11-456b-b7ea-72df2a0085bd/default.jpg?tr=cm-pad_resize,w-900"
+                    alt="tag" />
+                <h3>Up to 30% Off</h3>
+                <p>Perfectly Fanned Out Lashes!</p>
+            </a>
+        </div>
+    </div>
+    <div class="pic3">
+        <img src="https://images-static.nykaa.com/uploads/2bb0b9db-fd33-4a75-8daf-35794505a030.jpg?tr=cm-pad_resize,w-1800"
+            alt="brands" class="offer1">
+    </div>
+
+    <div class="offers-container3">
+        <img src="https://images-static.nykaa.com/uploads/d95e64c7-3a88-4ad7-a501-25c004d8cf3c.jpg?tr=cm-pad_resize,w-1800"
+            alt="Season's offer" class="offer2" />
+    </div>
+
+    <div class="box1">
+        <img src="https://images-static.nykaa.com/uploads/57626c17-03f8-447f-8811-3fd2ad5bf6cb.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+        <img src="https://images-static.nykaa.com/uploads/e8df588d-2da8-41a4-9c20-57d893ed0e18.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+        <img src="https://images-static.nykaa.com/uploads/463b338f-b18b-412a-a2f6-4735b566f1f3.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+        <img src="https://images-static.nykaa.com/uploads/d0c0fb93-8e0c-4094-9eb7-1268d69e80d7.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+        <img src="https://images-static.nykaa.com/uploads/26f7a7ee-6611-4a95-a7ab-718ce5c8d545.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+        <img src="https://images-static.nykaa.com/uploads/a4e15880-1c7e-49f6-bd26-47e287056680.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+        <img src="https://images-static.nykaa.com/uploads/bf717669-4aa9-46a7-9966-04e9fb897279.jpg?tr=cm-pad_resize,w-300"
+            alt="" class="offer8">
+
+    </div>
+    <div class="banner2">
+        <p>Find Your Perfect Match</p>
+        <img src="https://images-static.nykaa.com/uploads/f00522a9-3326-4d71-891d-d796f1b08b28.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+
+    <div class="banner3">
+        <img src="https://images-static.nykaa.com/uploads/eef5181f-db0f-4f5a-9d00-0890923576c9.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+
+    <div class="offers-container4">
+        <img src="https://images-static.nykaa.com/uploads/2e50508c-0aa7-4cd9-8704-7059a0c6f0b5.jpg?tr=cm-pad_resize,w-450"
+            alt="offer" class="offer3">
+        <img src="https://images-static.nykaa.com/uploads/40f5bd0a-04df-4789-8b07-65aefa2b1a9e.jpg?tr=cm-pad_resize,w-450"
+            alt="offer" class="offer3">
+        <img src="https://images-static.nykaa.com/uploads/41a95ec4-d4d0-4455-905e-057d4a5bf0e0.jpg?tr=cm-pad_resize,w-450"
+            alt="offer" class="offer3">
+        <img src="https://images-static.nykaa.com/uploads/32c98bf8-0a27-4002-acdf-e06fe1f9d81e.jpg?tr=cm-pad_resize,w-450"
+            alt="offer" class="offer3">
+        <img src="https://images-static.nykaa.com/uploads/bd8b4a7e-ce1b-4e50-b14a-99e6768bd0ce.jpg?tr=cm-pad_resize,w-450"
+            alt="offer" class="offer3">
+    </div>
+    <div class="tag2">
+        <img src="https://images-static.nykaa.com/uploads/cf3f99b4-5575-41f5-be92-90f0b2e382aa.jpg?tr=cm-pad_resize,w-1800"
+            alt="offer" class="t2">
+    </div>
+    <div class="offers-container5">
+        <img src="C:\Users\jssar\OneDrive\Desktop\Frontend\css\img1.jpeg" alt="offer" class="offer4">
+    </div>
+    <div class="offers-container6">
+        <img src="C:\Users\jssar\OneDrive\Desktop\Frontend\css\img2.jpeg" alt="offer" class="offer4">
+    </div>
+    <div class="offers-container7">
+        <img src="C:\Users\jssar\OneDrive\Desktop\Frontend\css\img3.jpeg" alt="offer" class="offer4">
+    </div>
+    <div class="offers-container8">
+        <img src="C:\Users\jssar\OneDrive\Desktop\Frontend\css\img4.jpeg" alt="offer" class="offer4">
+    </div>
+    <div class="banner4">
+        <img src="https://images-static.nykaa.com/uploads/7e31e1c7-6fd6-4eff-a055-6bcb49d79752.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+
+    <div class="banner5">
+        <img src="https://images-static.nykaa.com/uploads/09bf632c-85c0-4f16-ad1e-44c64ff9f350.gif" alt="">
+    </div>
+
+    <div class="tag5">
+        <img src="https://images-static.nykaa.com/uploads/15972b81-ccee-4933-9c48-3125a475f0a7.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+
+    <div class="banner6">
+        <img src="https://images-static.nykaa.com/uploads/09a3235c-94c9-4aa3-81f9-15e6644383ae.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/a3117572-9bbd-4051-800b-f6755612d07a.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/94c1cae1-36ab-49fc-87da-e6fc062ab6fd.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/31537180-3956-4630-87dd-5280c76921e6.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+    <div class="banner7">
+        <img src="https://images-static.nykaa.com/uploads/a262fc01-b94c-4576-a84f-3f5d798e8f4f.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/764474f4-5aea-42ea-b9df-64cf118c9d6e.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/a32ba44d-6bb8-4243-81be-e63e35a2cb36.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/a61f21d5-9b5a-4fb6-8167-4cf01b4722ed.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/5b0105a3-35fd-478d-85b2-552d04b283bf.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+        <img src="" alt="">
+    </div>
+    <img src="https://images-static.nykaa.com/uploads/53fd9078-da85-4039-8241-1c4420e70660.jpg?tr=cm-pad_resize,w-1800"
+        alt="" class="banner8_img">
+
+    <div class="banner8">
+
+        <img src="https://images-static.nykaa.com/uploads/f0959609-31ea-4a8d-9a0f-2ca8a532e976.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+        <img src="https://images-static.nykaa.com/uploads/fca36304-4603-4929-9106-a2e5472becf7.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+        <img src="https://images-static.nykaa.com/uploads/725afe3e-b832-4ab3-a657-18859471fb04.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+        <img src="https://images-static.nykaa.com/uploads/67147caf-23a2-4e69-a265-5b4aa976bd8a.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+        <img src="https://images-static.nykaa.com/uploads/dd97572a-cef1-469a-8e76-44ef946b3501.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+        <img src="https://images-static.nykaa.com/uploads/e974f0e0-8ac0-4e64-8e1c-180e29f7fc94.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+        <img src="https://images-static.nykaa.com/uploads/be92896a-f26e-414c-888e-12984b4d8041.jpg?tr=cm-pad_resize,w-225"
+            alt="" class="banner8_circle">
+    </div>
+    <div class="tag5">
+        <img src="https://images-static.nykaa.com/uploads/f35ea067-fa9e-458e-a806-68be1df01eab.jpg?tr=cm-pad_resize,w-1800"
+            alt="" />
+    </div>
+    <img class="b9"
+        src="https://images-static.nykaa.com/uploads/fbc58e1a-39b9-4208-a9b7-0adc1c8a7760.jpg?tr=cm-pad_resize,w-1800"
+        alt="">
+    <div class="banner9">
+
+        <img src="https://images-static.nykaa.com/uploads/a522e0a9-b830-419b-a839-d9b08cf6eefd.jpg?tr=cm-pad_resize,w-450"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/7342f7fc-1f9c-40b9-9a1f-be01974f7991.jpg?tr=cm-pad_resize,w-450"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/69143ae1-1c55-44f8-a477-ede4f90e3177.jpg?tr=cm-pad_resize,w-450"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/a2846813-fc4c-4f69-ae51-dd67447f3bcf.jpg?tr=cm-pad_resize,w-450"
+            alt="">
+        <img src="https://images-static.nykaa.com/uploads/ff238b6c-6e6f-4c8a-941f-33f50b03cc6a.jpg?tr=cm-pad_resize,w-450"
+            alt="">
+    </div>
+
+
+    <div class="tag3">
+        <img src="https://images-static.nykaa.com/uploads/2a0fbe4b-f775-4f02-9377-c7f7c384d2a7.jpg?tr=cm-pad_resize,w-1800"
+            alt="offer" class="t3">
+    </div>
+
+    <div class="offers-container10">
+        <img src="https://images-static.nykaa.com/uploads/42052645-91f9-4a4a-aa40-d3f02c8bdd3b.jpg?tr=cm-pad_resize,w-900"
+            alt="offer" class="offer6">
+        <img src="https://images-static.nykaa.com/uploads/fec9b487-5ba5-4c4b-b9d5-b55a563cc43a.jpg?tr=cm-pad_resize,w-900"
+            alt="offer" class="offer6">
+        <img src="https://images-static.nykaa.com/uploads/86249382-97d9-49f4-9359-b5491f47c804.jpg?tr=cm-pad_resize,w-900"
+            alt="offer" class="offer6">
+    </div>
+    <div class="tag4">
+        <img src="https://images-static.nykaa.com/uploads/bdfbf365-fd56-44ba-9cfc-75ffc3fa989f.jpg?tr=cm-pad_resize,w-1800"
+            alt="offer" class="t4">
+    </div>
+
+    <div class="offers-container11">
+        <img src="https://images-static.nykaa.com/uploads/efb33feb-6273-43df-89a8-119680666dcd.gif" alt="offer"
+            class="offer7">
+        <img src="https://images-static.nykaa.com/uploads/1c39231f-2e3a-4750-8c1a-1d44e3af9b0f.gif" alt="offer"
+            class="offer7">
+    </div>
+    <div class="banner10">
+        <img src="https://images-static.nykaa.com/uploads/bb294477-9f87-4d33-a001-814f86633fe3.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+    <div class="offers-container12">
+        <img src="https://images-static.nykaa.com/uploads/2c3ec730-2bf5-4db6-8a79-083af2fbde6c.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/c30a5e35-31e3-4227-b869-0a43611f071d.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/b5be302c-ab22-467c-8242-71f7028f7230.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/460c580a-ef0d-4e7e-b895-5b56a56fcf37.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/7281a4c7-1a0a-45ef-bd8b-e988bd098a2a.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/1352949d-81ff-42c2-8deb-13dadae40cd2.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/5d5268b3-b621-4a5f-af03-7057b0d0fd5c.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/dd810793-184f-4525-9eb4-e9f0631d8ff9.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+        <img src="https://images-static.nykaa.com/uploads/5330c0f7-b5ab-46e3-a1d0-09bc994caba7.jpg?tr=cm-pad_resize,w-225"
+            width="10%">
+    </div>
+    <div class="img5">
+        <img src="https://images-static.nykaa.com/uploads/49e43a50-37b5-405a-be2d-ab90055115ec.jpg?tr=cm-pad_resize,w-1800"
+            alt="">
+    </div>
+    <div class="text1">
+        <h1>Nykaa - The Online Beauty Store</h1>
+    </div>
+    <div class="bar1">
+        <a href=""><img src="https://img.icons8.com/?size=48&id=85500&format=png" alt=""> Get special discount on your
+            inbox</a>
+
+        <a href=""><img src="https://img.icons8.com/?size=50&id=MzZ4F5p7WPM8&format=png" alt="">Experience the nykaa
+            mobile app</a>
+        <a href=""><img src="https://img.icons8.com/?size=96&id=JIWjN75Dtifg&format=png" alt="">For any help, you may
+            call us at 1800-267-4444</a>
+
+        <input class="ser" type="text" name="" placeholder="Your Email">
+        <button class="sub">SEND</button>
+
+        <img class="play" src="google.png" alt="">
+        <!-- <a class="sec" href="#">(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</a> -->
+        <p class="time">(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM) </p>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-column">
+            <div class="logo">NYKAA</div>
+            <ul>
+                <li><a href="#">Who are we?</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Authenticity</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Nykaa CSR</a></li>
+                <li><a href="#">Responsible Disclosure</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Link to Smart ODR</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Frequently asked questions</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Cancellation & Return</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Sell on Nykaa</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Inspire Me</h3>
+            <ul>
+                <li><a href="#">Beauty Book</a></li>
+                <li><a href="#">Nykaa Network</a></li>
+                <li><a href="#">Buying Guides</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Offer Zone</a></li>
+                <li><a href="#">New Launches</a></li>
+                <li><a href="#">Nykaa Man</a></li>
+                <li><a href="#">Nykaa Fashion</a></li>
+                <li><a href="#">Nykaa Pro</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Top Categories</h3>
+            <ul>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Skin</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Bath & Body</a></li>
+                <li><a href="#">Appliances</a></li>
+                <li><a href="#">Mom and Baby</a></li>
+                <li><a href="#">Health & Wellness</a></li>
+                <li><a href="#">Fragrance</a></li>
+                <li><a href="#">Natural</a></li>
+                <li><a href="#">Luxe</a></li>
+            </ul>
+        </div>
+
+
+    </footer>
+
+    <section class="feature-section">
+        <div class="feature-item">
+            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg" alt="Free Shipping">
+            <h4>FREE SHIPPING</h4>
+            <p>On Orders Above ₹299</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg" alt="Easy Returns">
+            <h4>EASY RETURNS</h4>
+            <p>15-Day Return Policy</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg" alt="Authentic Products">
+            <h4>100% AUTHENTIC</h4>
+            <p>Products Sourced Directly</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg" alt="Brands">
+            <h4>1900+ BRANDS</h4>
+            <p>1.2 Lakh+ Products</p>
+        </div>
+    </section>
+    <section class="social-media">
+        <p>Show us some love <span><i class="fa-solid fa-heart"></i> on social media</p>
+        <a href="#"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg" alt="Instagram"></a>
+        <a href="#"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg" alt="Facebook"></a>
+        <a href="#"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg" alt="YouTube"></a>
+        <a href="#"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-twitter-filled.svg" alt="Twitter"></a>
+        <a href="#"><img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg" alt="Pinterest"></a>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Cancellation Policy</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 SUREKHA & SAROJA All Rights Reserved. </p>
+        </div>
+        <div class="popular-links">
+            <h2>Popular Links</h2>
+            <p>
+                Lipstick, Highlighter, Hair Serum, Concealer, Face Mask, Biotique, Lip Gloss, Perfume For Women, 
+                Facial Kit, Bb Cream, Victoria Secret, Love Beauty And Planet Shampoo, Eyeliner, Hair Mask, 
+                Face Wash For Oily Skin, Ordinary, Toner, Eyeshadow Palette, Cleanser, Chemist At Play, 
+                Mascara, Loreal Professional, Hair Extensions, Olay Cream, Fogg, Lip Tint, Under Eye Cream, 
+                Wax Strips, Shower Gel, Sunscreen For Face, Insight Cosmetics, Face Foundation, Hair Removal 
+                Machine, Mac Foundation, Ochre, Oud Perfume, Makeup Pouch, Olaplex, Body Mist, Wella Shampoo, 
+                Huda Beauty Foundation, Night Cream, Facewash, Nyx, Schwarzkopf Shampoo, Face Heaven, Peel Off 
+                Mask, Best Lip Balm, Face Scrub, Cetaphil Face Wash, Mederma Cream, Multivitamins Tablet, 
+                Himalaya Face Wash, Garnier Face Wash, Hair Color For Women, Cetaphil Moisturizers, Ponds Face 
+                Wash, Streax Hair Serum, Nivea Body Lotions, Vaseline Body Lotions, Sugar Lipstick, Biotin 
+                Tablet, Aqualogica Sunscreen, Salicylic Acid Face Wash, Fogg Perfume, Clean And Clear Face 
+                Wash, Neutrogena Sunscreen, Pears Soaps, Hair Color For Men, Dry Cleansers, Face Serum
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
